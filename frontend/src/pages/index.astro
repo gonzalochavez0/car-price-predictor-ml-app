@@ -1,0 +1,46 @@
+---
+import PredictForm from "../components/PredictForm.jsx";
+import ResultPanel from "../components/ResultPanel.jsx";
+import CarApp from "../components/CarApp.jsx";
+import "../styles/global.css";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Car Predictor</title>
+  </head>
+
+  <body class="bg-slate-100 min-h-screen flex items-center justify-center">
+    <main
+      class="w-full max-w-6xl p-8 bg-white/60 backdrop-blur-lg rounded-3xl shadow-xl"
+    >
+      <!-- HEADER -->
+      <div class="text-center mb-10">
+        <div
+          class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-r from-blue-400 to-purple-400 flex items-center justify-center text-white text-2xl"
+        >
+          <img src="/car.png" alt="" />
+        </div>
+
+        <h1 class="text-2xl font-semibold mt-4">
+          Predicción de Precios de Autos Usados
+        </h1>
+
+        <p class="text-gray-500 text-sm mt-2">
+          Ingresa los datos de tu vehículo para obtener una estimación de precio
+        </p>
+      </div>
+
+      <!-- GRID -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="col-span-2">
+          <CarApp client:load />
+        </div>
+      </div>
+      <div class="text-center text-sm text-gray-400 mt-8">
+      ✨ Demo de aplicación web - Predicción basada en simulación
+    </div>
+    </main>
+  </body>
+</html>
