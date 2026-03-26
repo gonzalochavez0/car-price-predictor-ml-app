@@ -64,6 +64,7 @@ It combines:
 ---
 
 ## 📁 Project Structure
+```
 car-price-predictor-ml-app/
 │
 ├── backend/
@@ -80,6 +81,7 @@ car-price-predictor-ml-app/
 │
 ├── README.md
 ├── LICENSE
+```
 
 ---
 
@@ -101,14 +103,14 @@ car-price-predictor-ml-app/
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
-
+```
 ### 🔹 Frontend
 
 ```bash
 cd frontend
 npm install
 npm run dev
-
+```
 ## ⚠️ Notes
 - This project uses a locally trained machine learning model
 - No API keys or sensitive data are required
