@@ -21,7 +21,7 @@ export default function PredictForm({ setResult, setFormData }) {
         return;
       }
 
-      const response = await fetch("radiant-wonder-production-b5c2.up.railway.app/predict", {
+      const response = await fetch("", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
