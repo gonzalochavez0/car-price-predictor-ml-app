@@ -36,7 +36,7 @@ modelo mediante un endpoint `/metadata`.
 - [Machine learning](#machine-learning)
 - [Configuración](#configuración)
 - [Despliegue](#despliegue)
-- [Limitaciones y próximos pasos](#limitaciones-y-próximos-pasos)
+- [Próximos pasos](#próximos-pasos)
 - [Licencia](#licencia)
 
 ---
@@ -301,16 +301,14 @@ que volver a compilar el frontend.
 
 ---
 
-## Limitaciones y próximos pasos
+## Próximos pasos
 
-- El dataset es **sintético**; el modelo captura solo tendencias generales.
-- `owner_count`, `service_history` y `accidents_reported` están en el CSV pero
-  sin usar — sumarlos es la mejora con más impacto en la precisión.
-- El intervalo que devuelve la API es una heurística de dispersión, no un
-  intervalo de confianza calibrado (regresión cuantílica o *conformal
-  prediction* lo resolverían).
-- Planificado: versionado del modelo con métricas por corrida, un Dockerfile y
-  tests automatizados con `pytest` + `httpx`.
+- Versionado del modelo con las métricas registradas en cada corrida de
+  entrenamiento.
+- Un Dockerfile para desplegar la API con un solo comando.
+- Tests automatizados con `pytest` + `httpx` sobre `/predict` y `/metadata`.
+- Sumar `owner_count`, `service_history` y `accidents_reported` como features: son
+  las columnas del dataset con más impacto potencial en la precisión.
 
 ---
 
